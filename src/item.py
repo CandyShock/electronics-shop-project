@@ -1,13 +1,11 @@
 import csv
-from src.funcrion import sds
-
 class Item:
     """
     Класс для представления товара в магазине.
     """
     pay_rate = 1.0
     all = []
-    a = sds()
+
 
     def __init__(self, name: str, price: float, quantity: int,) -> None:
         """
@@ -59,9 +57,9 @@ class Item:
 
 
     @classmethod
-    def instantiate_from_csv(cls, a):
-        class_ = a
-        return cls(class_)
+    def instantiate_from_csv(cls, emp_str):
+        first, last, pay = emp_str.split(' ')
+        return cls(first, last, pay)
 
 
 
@@ -73,4 +71,6 @@ class Item:
         return len(a)
 
 
-Item.instantiate_from_csv
+#emp_str_1 = 'Смартфон', '100', '1'
+#new_emp_1 = Item.instantiate_from_csv(emp_str_1)
+#print(new_emp_1)

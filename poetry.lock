@@ -13,6 +13,17 @@ files = [
 ]
 
 [[package]]
+name = "function"
+version = "1.2.0"
+description = "A simple nest list"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "function-1.2.0.tar.gz", hash = "sha256:53eb5eb647e8bec5965fac4870e4bb96fb0fa87960bb21e3e10d2889597fbb7f"},
+]
+
+[[package]]
 name = "iniconfig"
 version = "2.0.0"
 description = "brain-dead simple config-ini parsing"
@@ -73,7 +84,18 @@ pluggy = ">=0.12,<2.0"
 [package.extras]
 testing = ["argcomplete", "attrs (>=19.2.0)", "hypothesis (>=3.56)", "mock", "nose", "pygments (>=2.7.2)", "requests", "xmlschema"]
 
+[[package]]
+name = "sds"
+version = "2.0.1"
+description = "Stochastic Diffusion Search"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "sds-2.0.1.tar.gz", hash = "sha256:606f9b97201ba06f3c5e63701b34225e540e40ce3ab3857906e3a2985ea68ae1"},
+]
+
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "78dc697df2076a8b472a731bdf022a6c85563e2a540a7effeeb70bd1bf3f4627"
+content-hash = "1f66245dce9119ef3751d4e11c3aeabfc2a3292fae57597d6a193b33afee348c"
