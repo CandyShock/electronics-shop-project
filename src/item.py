@@ -66,4 +66,4 @@ class Item:
         random_str = round(int(random_str))
         return random_str
 
-# print(Item.string_to_number('5.5'))
+#print(Item.string_to_number('5.7'))

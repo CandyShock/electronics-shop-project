@@ -6,9 +6,8 @@ from src.item import Item
 def item_obj():
     return Item("name", 2, 12)
 @pytest.fixture
-def item_to_int():
-    random_int = '5.7'
-    return random_int
+def item_emp():
+    return Item('name', 2, 14)
 
 def test_func(item_obj):
     assert item_obj.name == "name"
@@ -22,8 +21,13 @@ def test_calculate_total(item_obj):
 
 
 
-def test_string_to_number(str_int):
-    assert item_to_int.string_to_number() == 5
+def test_string_to_number():
+    assert Item.string_to_number('5') == 5
+    assert Item.string_to_number('5.0') == 5
+    assert Item.string_to_number('5.7') == 5
+    assert Item.string_to_number('6.0') == 6
 
-
-
+def test_instantiate_from_csv():
+    emp = [['Смартфон', '100', '1'], ['Ноутбук', '1000', '3'], ['Кабель', '10', '5'], ['Мышка', '50', '5'], ['Клавиатура', '75', '5']]
+    Item.instantiate_from_csv(emp)
+    assert len(Item.all) == 5
