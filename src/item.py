@@ -1,3 +1,5 @@
+import csv
+
 
 class Item:
     """
@@ -6,8 +8,7 @@ class Item:
     pay_rate = 1.0
     all = []
 
-
-    def __init__(self, name: str, price: float, quantity: int,) -> None:
+    def __init__(self, name: str, price: float, quantity: int, ) -> None:
         """
         Создание экземпляра класса item.
 
@@ -31,7 +32,7 @@ class Item:
         """
         Применяет установленную скидку для конкретного товара.
         """
-        return int(self.price*self.pay_rate)
+        return int(self.price * self.pay_rate)
 
     def name_add(self):
         return self.all.append(self.__name)
@@ -51,26 +52,18 @@ class Item:
         else:
             print('Длина наименования товара превышает 10 символов')
 
-
-
-
-
-
     @classmethod
-    def instantiate_from_csv(cls, emp_str):
-        first, last, pay = emp_str.split(' ')
-        return cls(first, last, pay)
+    def instantiate_from_csv(cls, csv_str):
 
+        for name, price, quantity in csv_str:
+            cls.all.append(cls(name, price, quantity))
 
-
+        return cls.all
 
     @staticmethod
-    def string_to_number(instantiate_from_csv):
-        a = instantiate_from_csv
-        a.split('\n')
-        return len(a)
+    def string_to_number(random_str):
+        random_str = float(random_str)
+        random_str = round(int(random_str))
+        return random_str
 
-
-#emp_str_1 = 'Смартфон', '100', '1'
-#new_emp_1 = Item.instantiate_from_csv(emp_str_1)
-#print(new_emp_1)
+# print(Item.string_to_number('5.5'))
