@@ -66,4 +66,16 @@ class Item:
         random_str = round(int(random_str))
         return random_str
 
+
+    def __repr__(self):
+        return f"Item('{self.__name}', {self.price}, {self.quantity})"
+
+
+    def __str__(self):
+        return f"{self.__name}"
+
+
+
 #print(Item.string_to_number('5.7'))
+#emp_1 = Item("Смартфон", 10000, 20)
+#print(emp_1)
