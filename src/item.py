@@ -68,7 +68,7 @@ class Item:
 
 
     def __repr__(self):
-        return f"Item('{self.__name}', {self.price}, {self.quantity})"
+        return f"{self.__class__.__name__}('{self.__name}', {self.price}, {self.quantity})"
 
 
     def __str__(self):
@@ -78,4 +78,4 @@ class Item:
 
 #print(Item.string_to_number('5.7'))
 #emp_1 = Item("Смартфон", 10000, 20)
-#print(emp_1)
+#print(repr(emp_1))
