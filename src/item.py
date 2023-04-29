@@ -75,6 +75,16 @@ class Item:
         return f"{self.__name}"
 
 
+    def __add__(self, other):
+        self.quantity = int(self.quantity)
+        other.quantity = int(other.quantity)
+        if isinstance(other, self.__class__):
+            return self.quantity + other.quantity
+        return None
+
+
+
+
 
 #print(Item.string_to_number('5.7'))
 #emp_1 = Item("Смартфон", 10000, 20)
