@@ -43,3 +43,8 @@ def test_str():
     item2 = "Калькулятор"
     assert  str(item1) == 'Смартфон'
     assert  str(item2) == 'Калькулятор'
+
+def test_check():
+    test = Item("Смартфон", 10000, 20)
+    test1 = Item("Смартфон", 10000, 20)
+    assert test + test1 == 40
